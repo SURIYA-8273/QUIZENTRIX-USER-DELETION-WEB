@@ -59,7 +59,7 @@ function App() {
     setMessage(null);
     
     try {
-      const { data, error } = await supabase.functions.invoke('delete-account', {
+      const { error } = await supabase.functions.invoke('delete-account', {
         headers: {
           Authorization: `Bearer ${session.access_token}`,
         },
